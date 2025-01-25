@@ -1,0 +1,1 @@
+export const app_logo = "https://logowik.com/content/uploads/images/restaurant9491.logowik.com.webp";

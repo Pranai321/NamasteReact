@@ -1,3 +1,72 @@
-#innerhead{
-    color:brown;
+.Header-container{
+    /* border: 1px solid black; */
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 120px;
+    width:120px;
+}
+.Nav-items{
+    display:flex;
+    align-items: center;
+    
+}
+.Nav-item{
+    margin: 0px 15px 0px 15px;
+}
+.Nav-item a{
+    text-decoration: none;
+}
+
+.btn button{
+    margin:5px;
+    height:30px;
+    font-size: 25px;
+    
+}
+
+.Search input:focus{
+    outline:none;
+}
+.Restaurant-card{
+    height:370px;
+    width:225px;
+    border: 1px solid gray;
+    padding: 5px;
+    Margin: 5px;
+}
+.restaurant-logo{
+    width:225px;
+    height:180px;
+}
+
+.cards-container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.schimmers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.schimmerCard{
+    height:370px;
+    width:225px;
+    padding: 5px;
+    Margin: 5px;
+    background-color: #EBEBF4;
+}
+
+.menuItem-container{
+    height: 200px;
+    width:40%;
+    border: 1px solid rgb(211, 203, 203);
+    margin:10px;
+}
+.person{
+    border: 2px solid rgb(211, 203, 203);
 }
