@@ -1,5 +1,8 @@
-.Header-container{
-    /* border: 1px solid black; */
+@import "tailwindcss";
+
+
+/* .Header-container{
+     border: 1px solid black; 
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -69,4 +72,4 @@
 }
 .person{
     border: 2px solid rgb(211, 203, 203);
-}
+}  */

@@ -4,7 +4,6 @@ class UserClass extends React.Component{
     constructor(props){
         super(props);
         this.state ={
-            count: 1,
             personInfo: {}
         }
         console.log("constructor");
@@ -30,15 +29,10 @@ class UserClass extends React.Component{
     render(){
 
         const {name,company,login} = this.state.personInfo;
-        return<div className = "person">
-            <button onClick = {()=>{
-                this.setState({
-                    count:this.state.count+1
-                });
-            }}>Count:{this.state.count}</button>
-            <h2>{name}</h2>
-            <h3>{company}</h3>
-            <h3>{login}</h3>
+        return<div className = "person"> 
+            <h2 className = "mx-4 my-2 text-2xl font-semibold">Author Name - {name}</h2>
+            <h3 className = "mx-4 my-2 text-2xl font-semibold">University- {company}</h3>
+            <h3 className = "mx-4 my-2 text-2xl font-semibold">Login ID - {login}</h3>
         </div> 
     }
 }

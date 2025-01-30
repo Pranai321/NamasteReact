@@ -14,22 +14,18 @@ const Header =()=>{
         btn = "✅"
     }
     return  (
-             <div className = "Header-container">
-                 <div className ="logo-container">
+             <div className = "flex justify-between bg-gray-100 ">
+                 <div className ="w-56">
                      <img className= "logo" src = {app_logo}></img>
                  </div>
-                 <div className = "Nav-items">
-                    <h2 className="Nav-item">Online Status:{btn}</h2> 
-                    <h2 className="Nav-item"><Link to = "/">Home</Link></h2>
-                    <h2 className="Nav-item"><Link to = "/about">About us</Link></h2>
-                    <h2 className="Nav-item"><Link to = "/contact">Contact us</Link></h2>
-                    <h2 className ="Nav-item"> 
-                        <Link to = "/grocery">
-                            grocery
-                        </Link>  
-                    </h2>
-                    <h2 className="Nav-item"><Link to = "/cart">Cart</Link></h2>
-                    <button className = "Login" onClick = {()=>{
+                 <div className = "flex items-center">
+                    <h2 className ="mr-5 text-lg font-bold">Online Status:{btn}</h2> 
+                    <h2 className ="mx-2 px-1 text-lg border-1 rounded-lg font-semibold text-blue-500 hover:bg-blue-300 hover:text-white"><Link to = "/">Home</Link></h2>
+                    <h2 className ="mx-2 px-1 text-lg border-1 rounded-lg font-semibold text-blue-500 hover:bg-blue-300 hover:text-white"><Link to = "/about">About us</Link></h2>
+                    <h2 className ="mx-2 px-1 text-lg border-1 rounded-lg font-semibold text-blue-500 hover:bg-blue-300 hover:text-white"><Link to = "/contact">Contact us</Link></h2>
+                    <h2 className ="mx-2 px-1 text-lg border-1 rounded-lg font-semibold text-blue-500 hover:bg-blue-300 hover:text-white"> <Link to = "/grocery">grocery</Link></h2>                   
+                    <h2 className ="mx-2 px-1 text-lg border-1 rounded-lg font-semibold text-blue-500 hover:bg-blue-300 hover:text-white"><Link to = "/cart">Cart</Link></h2>
+                    <button className = "mx-2 px-1 text-lg border-1 rounded-lg font-semibold text-blue-500 hover:bg-blue-300 hover:text-white" onClick = {()=>{
                         if(log =="Logout"){
                             setLog("Login");
                         }
