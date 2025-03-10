@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {RestaurantCardWithLabel} from "./RestaurantCard";
 import {useEffect, useState} from "react";
 import Schimmer from "./Schimmer";
 import {Link} from "react-router-dom";
@@ -11,6 +11,9 @@ const Body =()=>{
 
     const [listOfRestaurants, setListOfRestaurants, filteredRestaurants, setFilteredRestaurants] = useRestaurants();
     const stats = useOnlineStatus();
+
+    //RestaurantCardWithLabel
+    const RestaurantCardPromoted = RestaurantCardWithLabel(RestaurantCard);
 
      if(stats == false){
         return  <h1>Your internet is not connnected, try reconnecting!</h1>
@@ -55,10 +58,16 @@ const Body =()=>{
            >Top Rated Restaurants </button>
             <div className="flex flex-wrap">
                  {filteredRestaurants.map((restaurant) =>
-                     <Link to = {"/restaurants"+"/"+restaurant.id} key = {restaurant.id}>
-                        <RestaurantCard  rescard ={restaurant}/>
-                     </Link>
-                 )}
+                    <Link 
+                      to = {"/restaurants"+"/"+restaurant.id} 
+                      key = {restaurant.id}>
+                        {restaurant.promoted == true ?(
+                            <RestaurantCardPromoted rescard = {restaurant}/>) :(
+                            <RestaurantCard rescard = {restaurant} />)
+                        }
+
+                     </Link> 
+                )}
                  
             </div>
         </div>
