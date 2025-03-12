@@ -14,7 +14,7 @@ const Header =()=>{
         btn = "✅"
     }
     return  (
-             <div className = "flex justify-between bg-gray-100 ">
+             <div className = "flex justify-between bg-green-100 ">
                  <div className ="w-56">
                      <img className= "logo" src = {app_logo}></img>
                  </div>
