@@ -1,9 +1,10 @@
 import RestaurantCard, {RestaurantCardWithLabel} from "./RestaurantCard";
-import {useEffect, useState} from "react";
+import {useEffect, useState, useContext} from "react";
 import Schimmer from "./Schimmer";
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurants from '../utils/useRestaurants';
+import UserContext from "../utils/UserContext";
 
 const Body =()=>{
     const [searchText, setSearchText] = useState("");
@@ -15,9 +16,11 @@ const Body =()=>{
     //RestaurantCardWithLabel
     const RestaurantCardPromoted = RestaurantCardWithLabel(RestaurantCard);
 
-     if(stats == false){
-        return  <h1>Your internet is not connnected, try reconnecting!</h1>
-     }
+    const {setUserName} =useContext(UserContext);
+    // console.log(typeof(setUserName));
+
+     if(stats == false) <h1>Your internet is not connnected, try reconnecting!</h1>;
+     
     if(listOfRestaurants.length ===0){
         return <div className= "schimmers">
             {arr.map((val)=>
@@ -56,6 +59,9 @@ const Body =()=>{
             setFilteredRestaurants(newcard);
             } }
            >Top Rated Restaurants </button>
+           <input type = "text" className ="border-solid border-2 border-gray-500 rounded-lg p-2" onChange={(e)=>{
+                setUserName(e.target.value);
+           }}/>
             <div className="flex flex-wrap">
                  {filteredRestaurants.map((restaurant) =>
                     <Link 

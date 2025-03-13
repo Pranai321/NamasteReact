@@ -1,4 +1,4 @@
-import React from "react"; 
+import React, { useState, useEffect } from "react";
 import {lazy,Suspense} from "react"
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header"
@@ -9,11 +9,25 @@ import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import UserContext from "./utils/UserContext";
+
+
 
 const AppComponent = ()=>{
+
+    const [userName,setUserName] = useState(0);
+    console.log(userName);
+    useEffect(()=>{
+        const details = {name:"Pranai Sai Reddy Kalva"};
+        setUserName(details.name);
+    },[])
+    
     return <div>
-        <Header/>
-        <Outlet/>
+        <UserContext.Provider value = {{loggedInUser:userName, setUserName}}>
+            <Header/>
+            <Outlet/>
+        </UserContext.Provider>
+        
     </div>
 }
 
