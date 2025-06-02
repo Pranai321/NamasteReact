@@ -2,10 +2,11 @@ import ItemList from "./ItemList";
 import {useState} from "react";
 
 
-const RestaurantCategory = ({litem,showItem, setShowItem})=>{
+const RestaurantCategory =  ({litem,showItem, setShowItem})=>{
     const handleClick=()=>{ 
         setShowItem();
         console.log("button clicked");
+
     }
 
     return <div>

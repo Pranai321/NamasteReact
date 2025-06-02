@@ -12,7 +12,6 @@ const useRestaurants= ()=>{
         setListOfRestaurants(json);
         setFilteredRestaurants(json);
     }
-
     return [listOfRestaurants, setListOfRestaurants, filteredRestaurants, setFilteredRestaurants];
 }
 export default useRestaurants;
