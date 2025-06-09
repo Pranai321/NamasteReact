@@ -1,4 +1,21 @@
-const Practise =()=>{
-    return <h1>Practise Page</h1>
+const Comp = (props)=>{
+  console.log("props", props);
+  return <div>
+    <h1>{props.name}</h1>
+    <h2>HEading2</h2>
+    <h3>Heading3</h3>
+  </div>
 }
-export default Practise;
+
+const HigherComp = (Comp)=>{
+  return (props)=>{
+    return <div>
+      <h1>ComponentHeading</h1>
+      <Comp name = {props.name}/>
+    </div>
+  }
+}
+
+const CompwithHeading = HigherComp(Comp);
+
+export default CompwithHeading;

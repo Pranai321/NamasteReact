@@ -12,7 +12,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "./utils/UserContext";
 import {Provider} from "react-redux";
 import appStore from "./utils/appStore";
-import Practise from "./components/Practise";
+import CompwithHeading from "./components/Practise";
 
 const AppComponent = ()=>{
 
@@ -52,7 +52,7 @@ const appRouter = createBrowserRouter([
                 element : <About/>
             },
             {
-                path:'contact',
+                path:'/contact',
                 element: <Contact/>
             },
             {
@@ -69,7 +69,7 @@ const appRouter = createBrowserRouter([
             },
             {
                 path:'/Practise',
-                element:<Practise/>
+                element:<CompwithHeading name = "pranai" />
             }
         ]    
     }

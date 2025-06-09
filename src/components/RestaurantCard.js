@@ -18,11 +18,11 @@ const RestaurantCard = (props)=>{
 export const RestaurantCardWithLabel =(RestaurantCard)=>{
     return (props)=>{
         return <div>
+
              <label className = "absolute bg-black text-white m-2 p-2 rounded-lg">Promoted</label>
              <RestaurantCard rescard={props.rescard}/>
+             
         </div>
-           
-        
     }
 }
 export default RestaurantCard;

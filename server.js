@@ -23,7 +23,6 @@ const restaurants =  [
         rating: 4.2,
         eta: "30 minutes",
         image: "https://media.gettyimages.com/id/833378306/photo/generic-shots-of-a-pizza-from-pizza-hut-with-a-pizza-cutter.jpg?s=612x612&w=gi&k=20&c=_h3ggdppcsZFgqcNbP8TPWjohQzVe7b6rXABke4GkqM=",
-        promoted: true
     },
     {
         id: 3,
